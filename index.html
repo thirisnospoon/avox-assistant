@@ -63,46 +63,72 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+            .content {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+            .arrow {
+                position: static;
+                margin-top: 20px;
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="content">
         <h1>I will help your business achieve a powerful boost in sales using cutting-edge AI technologies</h1>
-        <p>This is the page of my AI assistant.  Just start the chat below and see for yourself what I can do.</p>
-		<p style="font-size: 0.8em">Please, don't ask for my contact details—all contracts will be handled through UpWork.</p>
+        <p>This is the page of my AI assistant. Just start the chat below and see for yourself what I can do.</p>
+        <p style="font-size: 0.8em">Please, don't ask for my contact details—all contracts will be handled through UpWork.</p>
     </div>
     <div class="arrow">↓</div>
-</body>
-<script type="text/javascript">
-  window.helpcrunchSettings = {
-    organization: 'avoxsystemsua',
-    appId: 'f31c298b-8199-4aad-804d-c2171fe483b8',
-    loadImmediately: true  
-  };
-</script>
 
-<script type="text/javascript">
-  (function(w,d){
-    var hS = w.helpcrunchSettings;
-    if(!hS || !hS.organization){ return; }
-    var widgetSrc = 'https://embed.helpcrunch.com/sdk.js';
-    w.HelpCrunch = function(){ w.HelpCrunch.q.push(arguments); };
-    w.HelpCrunch.q = [];
-    function r(){
-      if (d.querySelector('script[src="' + widgetSrc + '"]')) { return; }
-      var s = d.createElement('script');
-      s.async = 1;
-      s.type = 'text/javascript';
-      s.src = widgetSrc;
-      (d.body || d.head).appendChild(s);
-    }
-    if(d.readyState === 'complete' || hS.loadImmediately){
-      r();
-    } else if(w.attachEvent){
-      w.attachEvent('onload', r);
-    } else {
-      w.addEventListener('load', r, false);
-    }
-  })(window, document);
-</script>
+    <!-- HelpCrunch Chat Widget Scripts -->
+    <script type="text/javascript">
+      window.helpcrunchSettings = {
+        organization: 'avoxsystemsua',
+        appId: 'f31c298b-8199-4aad-804d-c2171fe483b8',
+        loadImmediately: true  
+      };
+    </script>
+    <script type="text/javascript">
+      (function(w,d){
+        var hS = w.helpcrunchSettings;
+        if(!hS || !hS.organization){ return; }
+        var widgetSrc = 'https://embed.helpcrunch.com/sdk.js';
+        w.HelpCrunch = function(){ w.HelpCrunch.q.push(arguments); };
+        w.HelpCrunch.q = [];
+        function r(){
+          if (d.querySelector('script[src="' + widgetSrc + '"]')) { return; }
+          var s = d.createElement('script');
+          s.async = 1;
+          s.type = 'text/javascript';
+          s.src = widgetSrc;
+          (d.body || d.head).appendChild(s);
+        }
+        if(d.readyState === 'complete' || hS.loadImmediately){
+          r();
+        } else if(w.attachEvent){
+          w.attachEvent('onload', r);
+        } else {
+          w.addEventListener('load', r, false);
+        }
+      })(window, document);
+    </script>
+</body>
 </html>
